@@ -3,7 +3,7 @@ import { error } from '@sveltejs/kit';
 import { PUBLIC_API_URL } from '$env/static/public';
 
 export async function load({ params }) {
-   let url = new URL(`${PUBLIC_API_URL}/${params.id}`)
+   let url = new URL(`${PUBLIC_API_URL}/grupos/${params.id}`)
    const response = await fetch(url);
    if (!response.ok) {
        error(response.status, "No se pudo cargar el grupo")
