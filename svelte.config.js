@@ -1,6 +1,9 @@
-/** @type {import('@sveltejs/kit').Config} */
-const config = {
-	kit: {}
-};
+import adapter from '@sveltejs/adapter-vercel';
 
-export default config;
+export default {
+	kit: {
+		adapter: adapter({
+			// see below for options that can be set here
+		})
+	}
+};
